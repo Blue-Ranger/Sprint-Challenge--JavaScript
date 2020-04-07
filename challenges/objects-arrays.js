@@ -8,30 +8,30 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 const tyrannosaurus = {
-  "name": "tyrannosaurus",
-  "diet": "carnivorous",
-  "weight": "7000kg",
-  "length": "12m",
-  "period": "Late Cretaceious",
-  "roar": function () {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: "7000kg",
+  length: "12m",
+  period: "Late Cretaceious",
+  roar: function () {
     return "RAWERSRARARWERSARARARRRR!";
   }
 };
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const stegosaurus = {
-  "name": "stegosaurus",
-  "diet": "herbivorous",
-  "weight": "2000kg",
-  "length": "9m",
-  "period": "Late Jurassic",
+  name: "stegosaurus",
+  diet: "herbivorous",
+  weight: "2000kg",
+  length: "9m",
+  period: "Late Jurassic",
 };
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 const velociraptor = {
-  "name": "tyrannosaurus",
-  "diet": "carnivorous",
-  "weight": "15kg",
-  "length": "1.8m",
-  "period": "Late Cretaceious",
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: "15kg",
+  length: "1.8m",
+  period: "Late Cretaceious",
 };
 
 // Using your dinosaur objects, log answers to these questions:
@@ -102,7 +102,7 @@ console.log(contactInfo);
 const unisWithUni = [];
 
 for (i = 0; i < graduates.length; i++) {
-  if (graduates[i].university === "Uni") {
+  if (graduates[i].university.includes("Uni")) {
     unisWithUni.push(graduates[i]);
   }
 }
@@ -146,26 +146,23 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = [];
-
 const lowCase = zooAnimals.map((item) => {
   return item.animal_name.toLowerCase();
 })
 
-console.log(lowCaseAnimalNames);
+console.log(lowCase);
 
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
 
 const popFilter = zooAnimals.filter((item) => {
   return item.population < 5;
 })
 
-console.log(lowPopulationAnimals);
+console.log(popFilter);
 
 /* Request 4: .reduce() 
 
@@ -174,11 +171,11 @@ The zoos need to know their total animal population across the United States. Fi
 */
 const populationTotal = 0;
 
-zooAnimals.reduce((accumulator, item) => {
+popFigures = zooAnimals.reduce((accumulator, item) => {
   return accumulator + item.population;
-}, 0);
+}, populationTotal);
 
-console.log(populationTotal);
+console.log(popFigures);
 
 
 /*

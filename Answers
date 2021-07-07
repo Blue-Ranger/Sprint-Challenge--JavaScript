@@ -1,0 +1,40 @@
+1. Describe the biggest difference between .forEach & .map.
+
+A. 
+    .forEach--allows the mutation of the original array.
+    
+    .map--returns a new array of the same size. .map is faster.
+
+2. What is the difference between a function and a method?
+
+A.
+    function-- defined outside of classes. outside an object can give return value.
+    
+    method-- defined inside of classes or apart of a class. a piece of code called associated with an object.
+
+3. What is closure?
+
+A.
+    the inner function that can access an outer function.
+
+4. Describe the four rules of the 'this' keyword.
+
+A.
+    Is the function called by new?
+    
+    Is the function called by call(), apply(), or bind()?
+    
+    Is the function called as a method, ie: obj.func()?
+    
+    Is the function called in the global scope?
+
+    If strict mode is enabled, return undefined.
+    
+    Otherwise, return the global object, ie: window.
+
+5. Why do we need super() in an extended class?
+
+A.
+    super is used to call the methods of the parent class. 
+    super() used within a constructor function to call the parent constructor function. 
+    extended stretches a class
